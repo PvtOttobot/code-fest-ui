@@ -1,29 +1,18 @@
-import './App.css'
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-
-const Home = () => <div>Home Page</div>;
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Home} from "./pages/Home.tsx";
+import {Therapist} from "./pages/therapist/Therapist.tsx";
 const About = () => <div>About Page</div>;
 
 const App = () => {
-  return (
-    <BrowserRouter>
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
-            </ul>
-        </nav>
-
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-        </Routes>
-    </BrowserRouter>
-  )
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/therapist" element={<Therapist />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App
