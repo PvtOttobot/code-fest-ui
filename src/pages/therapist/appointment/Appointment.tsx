@@ -1,8 +1,6 @@
-interface AppointmentProps {
-    name: string;
-    date: string;
-    time: string;
-}
+import {iAppointment} from "../../../api/interfaces/Appointment.tsx";
+
+interface AppointmentProps extends iAppointment {}
 
 const Appointment = (props: AppointmentProps) => {
     return(
