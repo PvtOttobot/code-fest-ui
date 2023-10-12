@@ -68,13 +68,13 @@ const LogInForm = ({ toggleIsSignUp, mockAdapter }: LogInFormProps) => {
                 className="col-span-8 col-start-3 flex flex-col items-center justify-center"
             >
                 <InputField
-                    label="Email"
+                    label="Username"
                     id="email"
                     registerOptions={register('email', {
                         required: true,
                     })}
                     error={errors.email}
-                    type="email"
+                    type="text"
                 />
 
                 <InputField

@@ -37,12 +37,19 @@ const SignUpForm = ({ toggleIsSignUp, mockAdapter }: SignUpFormProps) => {
         try {
             const response = await axios.post('https://yourapi.com/signup', {
                 email: data.emailSignUp,
+                username: data.usernameSignUp,
                 password: data.passwordSignUp,
                 confirmPassword: data.confirmPassword,
             });
 
             if (response.data.success) {
-                navigate('/home');
+                if (data.usernameSignUp == 'Admin') {
+                    navigate('/admin');
+                }
+
+                if (data.usernameSignUp == 'Therapist') {
+                    navigate('/therapist');
+                }
             } else {
                 // Handle login error, e.g. show a message to the user
             }
