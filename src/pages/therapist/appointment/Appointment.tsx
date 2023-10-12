@@ -88,7 +88,7 @@ const Appointment = (props: AppointmentProps) => {
 
                 {!checkedIn && (
                     <button
-                        className="bg-blue-600 text-white p-2 rounded-md mb-2"
+                        className="border-secondary border-4 rounded-sm bg-secondary text-white py-1 px-8 mb-2"
                         onClick={() => setCheckedIn(true)}
                     >
                         Check In
@@ -96,7 +96,7 @@ const Appointment = (props: AppointmentProps) => {
                 )}
                 {checkedIn && (
                     <button
-                        className="bg-white text-black p-2 rounded-md"
+                        className="border-secondary border-4 rounded-sm bg-secondary text-white py-1 px-8"
                         onClick={() => setCheckedIn(false)}
                     >
                         Check Out
@@ -104,12 +104,12 @@ const Appointment = (props: AppointmentProps) => {
                 )}
                 <div className="flex flex-row gap-4">
                     <button
-                        className="bg-red-700 text-white p-2 w-full rounded-md"
+                        className="border-red-600 border-4 rounded-sm bg-red-600 text-white py-1 px-8"
                         onClick={emergencyAlert}
                     >
                         Emergency
                     </button>
-                    <button className="bg-blue-600 text-white p-2 w-full rounded-md">
+                    <button className="border-secondary border-4 rounded-sm bg-secondary text-white py-1 px-8 w-full">
                         More
                     </button>
                 </div>
