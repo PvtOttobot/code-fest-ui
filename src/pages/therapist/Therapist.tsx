@@ -96,7 +96,6 @@ const Therapist = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-36"></div>
             {appts.map((appt) => (
                 <Appointment
                     date={appt.date}
