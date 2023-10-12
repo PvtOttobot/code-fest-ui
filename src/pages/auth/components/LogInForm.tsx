@@ -39,7 +39,7 @@ const LogInForm = ({ toggleIsSignUp, mockAdapter }: LogInFormProps) => {
             });
 
             if (response.data.success) {
-                navigate('/home');
+                navigate('/admin');
             } else {
                 // Handle login error, e.g. show a message to the user
             }
