@@ -78,7 +78,7 @@ const Appointment = (props: AppointmentProps) => {
                     </div>
                 </div>
                 {checkedIn && <div className="text-center text-4xl">
-                    <p>{Math.floor(counter / 60)}:{Math.floor(counter % 60)}</p>
+                    <p>{Math.floor(counter / 60)}:{(Math.floor(counter % 60) === 0) ? "00" : Math.floor(counter % 60) } </p>
                 </div>}
 
                 {!checkedIn && <button className="bg-blue-600 text-white p-2 rounded-md" onClick={() => setCheckedIn(true)}>Check In</button>}
