@@ -11,6 +11,7 @@ type SignUpFormData = {
     emailSignUp: string;
     passwordSignUp: string;
     confirmPassword: string;
+    usernameSignUp: string;
 };
 
 type SignUpFormProps = {
@@ -72,6 +73,16 @@ const SignUpForm = ({ toggleIsSignUp, mockAdapter }: SignUpFormProps) => {
                     })}
                     error={errors.emailSignUp}
                     type="email"
+                />
+
+                <InputField
+                    label="Username"
+                    id="usernameSignUp"
+                    registerOptions={register('usernameSignUp', {
+                        required: true,
+                    })}
+                    error={errors.usernameSignUp}
+                    type="text"
                 />
 
                 <InputField

@@ -39,7 +39,13 @@ const LogInForm = ({ toggleIsSignUp, mockAdapter }: LogInFormProps) => {
             });
 
             if (response.data.success) {
-                navigate('/home');
+                if (data.email == 'Admin') {
+                    navigate('/admin');
+                }
+
+                if (data.email == 'Therapist') {
+                    navigate('/therapist');
+                }
             } else {
                 // Handle login error, e.g. show a message to the user
             }
