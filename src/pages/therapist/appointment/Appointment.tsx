@@ -16,6 +16,7 @@ const Appointment = (props: AppointmentProps) => {
             <p className="text-blue-950 font-bold">
                 Time: {props.time}
             </p>
+            <button text-align:center onClick={() => console.log("CHECKIN COMPLETE")}>Click me</button>
         </div>
     );
 }
